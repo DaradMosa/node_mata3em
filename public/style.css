@@ -1,0 +1,397 @@
+html{
+    height: 100%;
+  }
+body{
+    margin: 0cm;
+    padding: 0;
+    background: #CECECE;
+    color: #2E3840;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+.header{
+
+    width: 100%;
+    height: 117px;
+    display: block;
+}
+.header-border{
+    border-bottom: solid #2E3840 1px;
+    animation: leftright 0.7s ease;
+}
+@keyframes leftright {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes rightleft {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.inner_header{
+    width: 95%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+
+}
+.logo{
+    height: 100%; 
+    display: table;
+    float: left;
+    animation: leftright 0.7s ease;
+
+}
+.logo h1{
+    color: #2E3840;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 42px;
+    font-weight: 900;
+    
+}
+.logo h1 span{
+    font-weight: 400;
+}
+.navigation{
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    animation: rightleft 0.7s ease;
+
+}
+.header a:link{
+    color: #2E3840;
+    text-decoration: none;
+}
+.header a:visited{
+    color: #2E3840;
+    text-decoration: none;
+}
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    margin: 0px 20px;
+    height: 30px;
+    border-bottom: 5px solid;
+    margin-top: 45PX;
+    text-decoration: none;
+    transition: margin-top 0s;
+    transition: all 0.3s;
+    transition-delay: 0.1s;
+
+}
+.navigation a:last-child{
+    background-color: #4E6E81;
+    height: 55px;
+    margin-top: 35PX;
+    border-radius: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #ececec;
+    margin-right: 0;
+    margin-left: 0;
+
+    
+    transition: all 0.3s;
+}
+.navigation a:last-child:hover{
+    background-color: #2E3840
+}
+.navigation a.n:hover{
+    background-color: #2E3840;
+    color: #ececec;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 70px;
+    height: 50px;
+    margin-top: 40PX;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+
+    font-size: 24px;
+    font-weight: 600;
+
+}
+.content{
+
+    font-size: 30px;
+}
+@keyframes leftright-txt {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.Mata3em{
+    font-size: 100px;
+    font-weight: 600;
+    height: auto;
+    width: 430px;
+    margin-left: 15%;
+    margin-top: 40px;
+    animation: leftright-txt 0.7s ease;
+    animation-fill-mode: forwards;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation-delay: 0.6s;
+
+}
+.info{
+    height: auto;
+    width: 580px;
+    margin-right: 0;
+    margin-top: 100px;
+    margin-left: 15%;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10vw;
+    animation: leftright-txt 0.7s ease;
+    animation-fill-mode: forwards;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation-delay: 0.6s;
+
+}
+.footer{
+    margin-top: auto;
+    background-color: #2E3840;
+    padding: 60px 0;
+    animation: bottop 0.7s ease;
+}
+@keyframes bottop {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.list{
+    margin: 40px auto;
+    font-size: 0.7em;
+    font-weight: 600;
+    width: 90%;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: leftright-txt 1s ease;
+}
+.list thead tr{
+    background-color: #4E6E81;
+    color: #ececec;
+    text-align: center;
+}
+.list th{
+    
+    width: calc(auto + 13px);
+}
+.list thead button{
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ececec;
+    cursor: pointer;
+    padding: 10px 15px;
+
+}
+#name{
+    text-align: left;
+}
+#menu{
+    padding: 10px 15px;
+
+}
+
+.list tbody tr:nth-of-type(even){
+    background-color: #ECECEC;
+}
+.list tbody tr:hover td{
+    background-color: #2E3840;
+    color: #ececec;
+}
+.list tbody tr:hover .maps{
+    color: #ececec;
+}
+.list tbody tr:hover a:link{
+    color: #ececec;
+}
+.list tbody tr:hover a:visited{
+    color: #ececec;
+}
+.list tbody td{
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    border-right: 2px solid #D9D9D9;
+    color: #4E6E81;
+}
+.list tbody tr{
+    background-color: #FDFAFA;
+    border-bottom: 1px solid #dddddd;
+    
+}
+
+.list tbody td:first-child{
+    text-align: left;
+}
+.name{
+    text-align: left;
+}
+.list tbody td:last-of-type{
+    border: 0;
+}
+.list tbody tr:last-of-type{
+    border-bottom: 10px solid #4E6E81;
+}
+td a:link{
+    color: #4E6E81;
+    text-decoration: none;
+}
+td a:visited{
+    color: #4E6E81;
+    text-decoration: none;
+}
+
+.maps{
+    background: none;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    color: #4E6E81;
+    font-family: 'Roboto';
+    height: auto;
+    cursor: pointer;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.module{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 200px;
+    background-color: rgba(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.module-content{
+    position: relative;
+    margin: 0 auto;
+    background-color: #ECECEC;
+    width: 92%;
+    border: 3px solid #4E6E81;
+    padding: 4px;
+    height: 70%;
+}
+.module-content iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.closeModule{
+    position: absolute;
+    color: #4E6E81;
+    top: 5px;
+    right: 5px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closeModule:hover,
+.closeModule:focus {
+  color: #2E3840;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+@media only screen and (max-width: 780px){
+    .logo{
+        display: none;
+    }
+    .info{
+        width: 70vw;
+
+    }
+}
+@media only screen and (max-width: 600px){
+    .Mata3em{
+        font-size: 20vw;
+        width: 70vw;
+        margin-left: 7%;
+    }
+    .info{
+        width: 70vw;
+        font-size: 6vw;
+        margin-bottom: 20vw;
+    }
+    .navigation a li{
+        
+        font-size: 4.3vw;
+    }
+    .navigation a{
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+    }
+    .navigation{
+        justify-content: center;
+        width: 100%;
+
+    }
+    .navigation a:last-child{
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+@media only screen and (max-width: 750px){
+    .list{
+        font-size: 2.8vw;
+        margin: 5vw auto;
+    }
+
+    .list tbody td{
+        padding: 10px 2vw;
+    
+    }
+    .list thead button,
+    #menu{
+        padding: 10px 2vw;
+    
+    }
+}
