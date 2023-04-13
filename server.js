@@ -23,6 +23,6 @@ const db = mongoose.connection
 db.on("error",error => console.error(error))
 db.once("open",() => console.log("Connected to mongoose"))
 
-app.use("/yes", indexRouter)
+app.use("/", indexRouter)
 
 app.listen(process.env.PORT || 5000)
