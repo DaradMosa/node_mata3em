@@ -8,6 +8,8 @@ const app = express()
 const expressLayouts = require("express-ejs-layouts")
 
 const indexRouter = require("./routes/index")
+const listRouter = require("./routes/list")
+
 
 app.set("view engine", "ejs")
 app.set("views",__dirname + "/views")
@@ -17,12 +19,13 @@ app.use(express.static("public"))
 
 const mongoose = require("mongoose")
 mongoose.connect(process.env.DATABASE_URL,{
-    useNewUrlParser: true})
+    useNewUrlParser:true, useUnifiedTopology:true})
 
 const db = mongoose.connection
 db.on("error",error => console.error(error))
 db.once("open",() => console.log("Connected to mongoose"))
 
 app.use("/", indexRouter)
+app.use("/list", listRouter)
 
 app.listen(process.env.PORT || 5000)
